@@ -387,6 +387,8 @@ class Game:
                             run2 = False
                             self.draw_grid()
                     pygame.display.flip()
+            # Try to stay at 30 FPS
+            self.clock.tick(30)
 
 
 if __name__ == '__main__':
