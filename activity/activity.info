@@ -1,10 +1,16 @@
 [Activity]
 name = Dots and boxes
 license = GPLv3+
+metadata_license = CC0-1.0
 activity_version = 3
-bundle_id = org.ceibaljam.dotsandboxeS
+bundle_id = org.sugarlabs.DotsAndBoxes
+release_date = 2020-01-20
 icon = boxes-sugar
 exec = sugar-activity3 activity.Activity
 summary = The classical "Dots and Boxes" game.
+description = The activity allow us to select the colors of differents things: dots, lines, and background.
 repository = https://github.com/sugarlabs/dotsAndBoxes.git
 tags = Game
+update_contact = tch@sugarlabs.org
+developer_name = Sugar Labs Community
+screenshots = http://activities.sugarlabs.org/en-US/sugar/images/p/1118/1385840040

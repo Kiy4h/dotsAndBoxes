@@ -29,23 +29,24 @@ from gi.repository import Gdk
 import sugargame.canvas
 import pygame
 
-from sugar3.activity import activity
 from sugar3.graphics.toolbarbox import ToolbarBox
-from sugar3.activity.widgets import ActivityToolbarButton
 from sugar3.activity.widgets import StopButton
 from sugar3.graphics.colorbutton import ColorToolButton
 from sugar3.graphics.toolbarbox import ToolbarButton
 from sugar3.graphics.toolbutton import ToolButton
+
+from sugarapp.widgets import SugarCompatibleActivity
+from sugarapp.widgets import ExtendedActivityToolbarButton
 
 from gettext import gettext as _
 
 import main
 
 
-class Activity(activity.Activity):
+class Activity(SugarCompatibleActivity):
 
     def __init__(self, handle):
-        activity.Activity.__init__(self, handle)
+        SugarCompatibleActivity.__init__(self, handle)
         self.game_size = (8, 6)
         self.game = main.Game(self)
         self.build_toolbar()
@@ -63,7 +64,7 @@ class Activity(activity.Activity):
         self.set_toolbar_box(toolbar_box)
         toolbar_box.show()
 
-        activity_button = ActivityToolbarButton(self)
+        activity_button = ExtendedActivityToolbarButton(self)
         toolbar_box.toolbar.insert(activity_button, -1)
         activity_button.show()
 
